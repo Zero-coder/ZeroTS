@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Data and outputs
+data/
+datasets/
+checkpoints/
+outputs/
+*.ckpt
+*.pth
+*.pt
+synthetic_demo_output.csv
+evaluation_summary.json
+apsr_patch_size_map.csv
+
+# OS/editor
+.DS_Store
+Thumbs.db
+*.swp
+~$*.docx
+
