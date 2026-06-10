@@ -1,0 +1,17 @@
+{
+  "context_length": 336,
+  "prediction_length": 96,
+  "pod": 24,
+  "image_size": 224,
+  "patch_size": 16,
+  "min_patch_size": 4,
+  "max_patch_size": 16,
+  "tga_window": 3,
+  "tga_mode": "weighted_rgb",
+  "apsr_overlap": 0.1,
+  "interpolation": "bilinear",
+  "multivariate_mode": "independent",
+  "normalize_per_variable": true,
+  "infer_pod_max_lag": 96,
+  "random_seed": 2026
+}
