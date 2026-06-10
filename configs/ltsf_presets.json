@@ -1,0 +1,38 @@
+{
+  "ETTh1": {
+    "pod": 24,
+    "sampling_interval": "1 hour"
+  },
+  "ETTh2": {
+    "pod": 24,
+    "sampling_interval": "1 hour"
+  },
+  "ETTm1": {
+    "pod": 96,
+    "sampling_interval": "15 minutes"
+  },
+  "ETTm2": {
+    "pod": 96,
+    "sampling_interval": "15 minutes"
+  },
+  "Electricity": {
+    "pod": 24,
+    "sampling_interval": "1 hour"
+  },
+  "Traffic": {
+    "pod": 24,
+    "sampling_interval": "1 hour"
+  },
+  "Weather": {
+    "pod": 144,
+    "sampling_interval": "10 minutes"
+  },
+  "Exchange": {
+    "pod": 7,
+    "sampling_interval": "1 day"
+  },
+  "ILI": {
+    "pod": 52,
+    "sampling_interval": "1 week"
+  }
+}
