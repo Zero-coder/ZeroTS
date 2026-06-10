@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use ZeroTS, please cite the associated manuscript."
+title: "ZeroTS: Vision-MAE Adaptation for Zero-Shot Time-Series Forecasting"
+authors:
+  - family-names: "Cheng"
+    given-names: "Moquan"
+  - family-names: "Jiang"
+    given-names: "Maowei"
+  - family-names: "Liang"
+    given-names: "Wei"
+version: "0.1.0"
+date-released: "2026-06-10"
+
