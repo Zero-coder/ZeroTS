@@ -1,9 +1,10 @@
 # ZeroTS
 
 ZeroTS is a zero-shot time-series forecasting codebase that reformulates forecasting
-as an image-reconstruction style pipeline. The implementation focuses on leakage-free
-preprocessing, temporal gradient augmentation, adaptive patch selection and
-resampling, explicit hyperparameters, and reproducible evaluation scripts.
+as an image-reconstruction style pipeline. The implementation focuses on the pieces
+requested in the revision: leakage-free preprocessing, temporal gradient
+augmentation, adaptive patch selection and resampling, explicit hyperparameters,
+and reproducible evaluation scripts.
 
 ## What is included
 
@@ -18,6 +19,7 @@ resampling, explicit hyperparameters, and reproducible evaluation scripts.
   - `HFMaskedAutoencoderBackbone` for HuggingFace ViTMAE-style checkpoints.
   - `CallableBackbone` for custom pretrained image-reconstruction models.
 - CSV evaluation and synthetic demo scripts.
+- Reproducibility documentation for method details and baseline protocols.
 
 ## Install
 
@@ -97,6 +99,14 @@ and wrap it with `CallableBackbone`.
 - The deterministic backend is not the method used for final accuracy claims. It
   exists to verify preprocessing and reconstruction mechanics without external
   checkpoints.
+- Paper-scale accuracy experiments should use a pretrained image-reconstruction
+  backend and should report the exact checkpoint, input resolution, patch size,
+  mask construction, batch size, and device.
+
+Detailed reproducibility notes are provided in:
+
+- `docs/reproducibility.md` for the ZeroTS pipeline.
+- `docs/baselines.md` for baseline codebases, checkpoints, and protocols.
 
 ## Suggested hyperparameter table fields
 
@@ -117,3 +127,24 @@ Report the following fields in the manuscript or appendix:
 | Interpolation | `interpolation` |
 | Multivariate handling | `multivariate_mode` |
 | Reconstruction checkpoint | backend-specific |
+
+## Default revised settings
+
+Unless otherwise specified in an experiment-specific config, the revised
+manuscript uses:
+
+| Field | Value |
+| --- | --- |
+| Context length | `336` |
+| Prediction lengths | `96, 192, 336, 720` for LTSF |
+| Image resolution | `224 x 224` |
+| MAE checkpoint | `facebook/vit-mae-base` |
+| MAE patch size | `16` |
+| TGA window | `3` |
+| TGA mode | `weighted_rgb` |
+| Minimum APSR patch size | `4` |
+| Maximum APSR patch size | `16` |
+| APSR overlap | `0.1` |
+| Interpolation | `bilinear` |
+| Future initialization | zero placeholder |
+| Multivariate mode | independent per variable |
